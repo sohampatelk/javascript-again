@@ -94,6 +94,46 @@ myHeading.className = "grey-text";
  * Events!!
  */
 //we can add event listner to a targeted element.
- myHeading.addEventListener("mouseover", function(event){//here we are saying which element we are tageting
+myHeading.addEventListener("mouseover", function(event){//here we are saying which element we are tageting
      this.className="salmon-text";//here this keyword saying represents our element (myHeading)
  });
+
+myHeading.addEventListener("mouseleave", function(event){//here we are saying which element we are tageting
+    this.className="indigo-text";//here this keyword saying represents our element (myHeading)
+});
+
+myHeading.addEventListener("click", function(event){//here we are saying which element we are tageting
+    var bigClass = "big-text";
+    if(!this.className.includes(bigClass))
+    {
+    this.className +=" big-text";//space is mandatory because we give a space between 2 classes. we are clicking on heading and there is already mouseover event happens..this big-text is second class . if we do 2nd class activity then we have to put space before a class name,
+    }
+});
+
+
+/*
+Make a function
+*/
+//Function keyword, followwed by function name
+function addTwoNumbers(x,y){
+    x=Number(x);// enforce data-type (number)
+    y=Number(y);
+    return (x+y);
+}
+
+function currentDayString(){
+    //new date object
+    var date = new Date();
+    //daclare a string we canstore data info in.
+    var dateString="";
+    //console.log(dateString);
+    dateString += date.getFullYear();
+    // console.log(typeof date.getFullYear());
+    dateString += ".";
+    dateString += date.getMonth();
+    dateString += ".";
+    dateString += date.getDay();
+    return dateString;
+}
+//output to console
+console.log("The current date is :\r\n" + currentDayString());

@@ -18,3 +18,6 @@ body{
 .indigo-text{
     color:indigo;
 }
+.big-text{
+    font-size: 3rem;
+}
