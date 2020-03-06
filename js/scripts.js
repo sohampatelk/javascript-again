@@ -125,9 +125,9 @@ function currentDayString(){
     //new date object
     var date = new Date();
     //daclare a string we canstore data info in.
-    var dateString="";
+    var dateString;//="";
     //console.log(dateString);
-    dateString += date.getFullYear();
+    dateString = date.getFullYear();
     // console.log(typeof date.getFullYear());
     dateString += ".";
     dateString += date.getMonth();
@@ -137,3 +137,4 @@ function currentDayString(){
 }
 //output to console
 console.log("The current date is :\r\n" + currentDayString());
+
