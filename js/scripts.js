@@ -224,6 +224,18 @@ function Person(name, age, hobbies) {
     this.name = name;
     this.age = age;
     this.hobbies = hobbies;
+
+    //adding a method in a constructor function
+    this.sayGoodbye = function(){ 
+        document.body.innerHTML += `
+            <p>
+                This is 
+                <strong>`+this.name+`</strong>,
+                saying <em>goodbye</ed>!
+            </p>
+        `;
+    }
+
 }
 //add another!this is not an easier compare than typing the whole object.
 var jerry = new Person("jerry",65,["SnowBoarding","Action Movies","Coding"]);
@@ -259,3 +271,8 @@ Person.prototype.introduction = function(){ //this is amethod to our person blue
         </dl>
     `;
 }
+
+//extra prototype practice:a property
+Person.prototype.nickname = "";
+jerry.nickname = "The big jare";
+sally.nickname = "Sallers";
