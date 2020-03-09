@@ -238,3 +238,24 @@ var sally = new Person(
         "Teaching"
     ]
 );
+
+//we can add to blueprint using "prototype", even after its initial declaration,
+Person.prototype.introduction = function(){ //this is amethod to our person bluepring /prototype.class!!
+
+    var hobbiesString = "<ul>";  //set up for list HTML
+    this.hobbies.forEach( function(value,index) {
+        hobbiesString += "<li>"+value+"</li>";  //loop through our hobbies and make a list for each
+    });
+    hobbiesString +="</ul>"; //we opened ul list and now close it with concatination.
+
+    //add html to body
+    document.body.innerHTML += `
+        <h2>`+this.name+`</h2>
+        <dl>
+            <dt>Age</dt>
+            <dd>`+this.age+`</dd>
+            <dt>Hobbies</dt>
+            <dd>`+ hobbiesString /*we built the string above,using this.hobbies, "hobbiesString " is a local variable (born in the method, and it will die in the method.)*/+`</dd>
+        </dl>
+    `;
+}
