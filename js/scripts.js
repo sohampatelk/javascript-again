@@ -227,4 +227,14 @@ function Person(name, age, hobbies) {
 }
 //add another!this is not an easier compare than typing the whole object.
 var jerry = new Person("jerry",65,["SnowBoarding","Action Movies","Coding"]);
-var sally = new Person("sally",45,["Biking","hunting","Teaching"]);
+
+//formated object
+var sally = new Person(
+    "sally",  //name
+    45, //age
+    [  //hobies array
+        "Biking",
+        "hunting",
+        "Teaching"
+    ]
+);
