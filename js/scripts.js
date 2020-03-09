@@ -138,3 +138,40 @@ function currentDayString(){
 //output to console
 console.log("The current date is :\r\n" + currentDayString());
 
+
+
+/*
+Lets review some conditions
+*/ 
+//check for euivalancy
+console.log(1 == true); //False
+console.log("" == true); //False
+console.log(-137 == true); //false
+console.log("test" == "test"); //true
+console.log(`test` ==`test`); //true
+console.log(36 =="36"); //true
+console.log(0 == false); //true
+console.log(1 == true); //true
+
+//check if identical value comaprison and type comparison
+console.log(1 === true); //false
+console.log("" === true); //false
+console.log(-137 === true); //false
+console.log("test" === "test"); //true
+console.log(`true` === `true`); //true
+console.log(0 === false); //false
+console.log(1 === true); //false because 1 is integer and true is string
+
+
+/**
+ * HAmberger menu
+ */
+//lets grab the menu by query selector select nav and menu-button
+ var myNav = document.querySelector("nav");
+ //and our menu button
+ var myNavButton = document.querySelector(".menu-button");
+
+ myNavButton.addEventListener("click", function (event){
+     //when clicked, add/remove the "nav-open" class(in html)
+    myNav.classList.toggle("nav-open");
+ });

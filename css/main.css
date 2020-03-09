@@ -1,12 +1,13 @@
-/* * {
+*{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-} */
+} 
 body{
     background-color:offwhite;
+    padding-top: 5rem; /* to fix space between nav bar and body heading*/
 }
 .grey-text{
     color: green;
@@ -20,4 +21,23 @@ body{
 }
 .big-text{
     font-size: 3rem;
+}
+
+
+/*
+Responsive navigation
+*/
+nav{
+    display: block;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    background: rgba(55,55,55,1);
+}
+nav ul{
+    list-style: none;
 }
