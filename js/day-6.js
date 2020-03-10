@@ -27,9 +27,29 @@ function myFunction(){
     
     //myDoubleNestedFunction(); // it will not work because it is out of scope.
 }
-
+console.log(myVariable);
 myFunction();//lets run and see...
 
 //console.log(myFunctionScopeVariable); //Can we see function run here? nope, because myFunctionScopeVariable defined in a local function.
 
 //myNestedFunction(); //this is not going to run because it is out of scope. we need to call myFunction(), it is inside scope of muFunction()
+
+
+/**
+ * Function returning function
+ */
+function addNum(x, y) {
+    return (Number(x) + Number(y)); //using number parsing we are not concatination.
+}
+function subtractNum(x, y) {
+    return (x - y);
+}
+function multiplyNum(x, y) {
+    return (x * y);
+}
+function divideNum(x, y) {
+    return (x / y);
+}
+function myMath(operation,x,y){
+
+}
