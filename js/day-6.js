@@ -50,6 +50,40 @@ function multiplyNum(x, y) {
 function divideNum(x, y) {
     return (x / y);
 }
-function myMath(operation,x,y){
-
+function myMath(operation){
+    switch(operation){
+        case "add":
+            return addNum(x,y); //return kills the function, sobreaks are not necessary,
+        case "subtract":
+            return subtractNum(x,y);
+        case "multiply":
+            return multiplyNum(x,y);
+        case "divide":
+            return divideNum(x,y);
+        default:
+            return "Invalid Operation.";
+    }
 }
+
+//console.log(myMath("add",10,18));
+//console.log(myMath("add")(10,18));
+
+/**
+ * Lets try with anonoumous function
+ */
+function newTestFunction(myString1){
+    myString1 = "Entred String is  : "+myString1;
+    return function(additionalString){
+        if (additionalString != undefined){
+            myString1 += ", "+additionalString;
+        }
+        return function(yetAnotherString){
+            if(yetAnotherString != undefined){
+                myString1 += ", "+yetAnotherString + "!!!";
+            }
+            return myString1;
+        }
+    }
+}
+
+console.log(newTestFunction("A B C D E F G")("H I J K L M N")("P Q R S X Y Z"));
